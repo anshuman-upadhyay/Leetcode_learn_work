@@ -16,5 +16,6 @@ int main(){
      for(auto& q:dq){
         cout<<q<<"\n";
      }
+    //  all the other operations are same as vectors 
 
 }
