@@ -10,6 +10,6 @@ int main(){
      for(auto& l:ls){
           cout<<l<<"\n";
      }
-
+return 0;
 // rest all the functions are same for vectors and list
 }
