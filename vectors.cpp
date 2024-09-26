@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// vector is a singly linked list instead of being an actual array
 int main(){
     vector<int> v{1,23,4,5,6};
     vector <int>::iterator it=v.begin();
