@@ -1,21 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-long long sumOfSeries(long long n) {
-    long long i=n;
+long long sumOfSeries(long long n){
+    long long a=n;
     long long sum=0;
-    if(i<1){
-        return sum;
+    for(long long i =1;i<=a;i++){
+        sum+=i*i*i;
     }
-    else{
-        int w=sumOfSeries(i-1)
-        sum+=w*w*w;  
-    }
-       
+    return sum;
 }
+
 
 int main(){
     long long n;
     cin>>n;
-    int n=sumOfSeries(n);
+    long long p=sumOfSeries(n);
+    cout<<p<<" ";
     return 0;
 }
