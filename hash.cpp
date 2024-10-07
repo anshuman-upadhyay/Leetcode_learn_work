@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
+// a globaly declared array can have 10^7 size and boolean array of 10^8
 int main(){
     cout<<"enter the no of element";
     int n;
     cin>>n;
-    int arr[n];
+    int arr[n];//inside main the largest int array size that can be declared is of 10^6 and a bool array 10^7
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
