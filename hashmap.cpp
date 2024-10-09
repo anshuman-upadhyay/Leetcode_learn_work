@@ -16,7 +16,6 @@ int main(){
     map<int,int> map;
     for(int i =0;i<n;i++){
         map[arr[i]]++;
-
     }
     //this is how we can iterate in a map nbut cannot enter a value into the map through this methof
     for(auto it:map){
@@ -42,3 +41,8 @@ int main(){
 
     return 0;
 }
+// in map any data structure including pair<int,int> can act as a key 
+// where as in unordered map the key can only be a single value and pairs aew not allowed
+
+// when using the unordered map the time complexity in best and worst case is O(1) in very minor case the worst case will be O(N) this is because internal collisions(as explained above) only in that case ordered maps are preffered
+// 

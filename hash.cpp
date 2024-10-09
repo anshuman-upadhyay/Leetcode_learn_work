@@ -26,3 +26,8 @@ int main(){
     }
 
 }
+// hashing methods:1 division method:what ever no is there do (num%10)  only once and store the remainder into the hashed array
+// in case 2 nos have the same remainder(collision) we use a linked list from the place of the first element in the map and as it is a linked list we can sort them as needed in real time
+// 2 folding method
+// 3 mid square method
+
