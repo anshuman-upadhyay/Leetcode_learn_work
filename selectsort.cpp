@@ -1,18 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-    int he[6]={13,46,24,52,20,9};
-    
-    for(int i =0;i< size(he);i++){
-        int min=he[i];
-        for(int j=i;j<=size(he)-1;j++){
-            if(min>he[j]){
-                he[i]=he[i]^he[j];
-                he[j]=he[i]^he[j];
-                he[i]=he[i]^he[j];
+void select(int arr[],int n){
+    for(int i=0;i<n;i++){
+        int min=arr[i];
+        for(int j=0;j<n-1;j++){
+            if(min<arr[j]){
+                swap(arr[i],arr[j]);
             }
         }
     }
+}
+int main(){
+    int he[9]={4, 1, 3, 9, 7,6,8,5,2};
+    select(he,9);
     for(int i=0;i<size(he);i++){
          cout<<he[i]<<",";
     }
