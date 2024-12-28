@@ -8,10 +8,6 @@ int main(){
     // vector<int> arr{4, 5, 2};
     vector<int> arr{1};
     reverseArray(arr);
-
-
-
-
 cout<<endl;
 return 0;
 }
