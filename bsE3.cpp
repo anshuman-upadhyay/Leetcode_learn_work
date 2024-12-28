@@ -1,12 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> getFloorAndCeil(int x, vector<int> &arr) {
-        
+        int s=arr.size();
+        int floor =-1;
+        int ceil =INT_MAX;
+        for(int i=0;i<s;i++){
+            if(arr[i]<=x && arr[i]>floor){
+                floor =arr[i];
+            }
+            if(arr[i]>=x && arr[i]<ceil){
+                ceil =arr[i];
+            }
+        }
+        if(ceil!=INT_MAX){
+            return {floor,ceil};
+        }
+        else return {floor,-1};
 
     }
 int main(){
-    vector<int> arr={5, 6, 8, 9, 6, 5, 5, 6};int x=7;
-    // vector<int> arr={5, 6, 8, 8, 6, 5, 5, 6};int x=10;
+    // vector<int> arr={5, 6, 8, 9, 6, 5, 5, 6};int x=7;
+    vector<int> arr={5, 6, 8, 8, 6, 5, 5, 6};int x=10;
     vector<int> ans=getFloorAndCeil(x,arr);
     for(int i=0;i<ans.size();i++){
         cout<<ans[i]<<",";
