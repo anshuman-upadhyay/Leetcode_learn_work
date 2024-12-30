@@ -44,7 +44,7 @@ return 0;
 }
 
 
-//attempt 1 : wrong answer at [1,0,2]
+//* attempt 1 : wrong answer at [1,0,2]
         //         int s=nums.size();
         // for(int i =0;i<s;i++) {
         //     if(nums[i]==0){
@@ -64,7 +64,7 @@ return 0;
 
 
 
-// attempt 2: bekar attempt 
+//* attempt 2: bekar attempt 
     //     vector<int> hash(s);
     //     int left=0;
     //     int right=s-1;
