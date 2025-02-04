@@ -23,7 +23,7 @@ int main(){
     // vector<int> nums={-1,0,3,5,9,12};int target=9;
     // vector<int> nums={5};int target=5;
     // vector<int> nums={-1,0,3,5,9,12};int target=2;
-    vector<int> nums={5,7,7,8,8,8,10};int target=8;
+    vector<int> nums={1 ,2 ,3 ,4, 5, 6 ,7};int target=9;
     
     int c=search(nums,target);
     cout<<c;
