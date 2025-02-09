@@ -23,7 +23,22 @@ class Node{
 };
 
 Node* reverseDLL(Node* head) {
+    Node* current=head;
+    Node* mover=current->next;
+    Node* temp=NULL;// empty pointer
+    while(current!=NULL){
+        //3rd value exchange karna
+        temp=current->prev;
+        current->prev=current->next;
+        current->next=temp;
+        
+       current=current->prev;
+    }
     
+   if(temp!=nullptr){
+    head=temp->prev;
+   }
+    return head;
 }
 
 
@@ -33,7 +48,7 @@ void printLL(Node* node){
         cout<<current->data<<"<->";
         current=current->next;
     }
-
+    cout<<endl;
 }
 
 int main(){
