@@ -17,27 +17,30 @@ class Node{
     }
 };
 
-Node* detectCycle(Node *head) {
-    if(head->next=NULL){
-        return head;
-    }
+Node* CountElementinLoop(Node *head) {
     Node* slow=head;
     Node* fast=head;
-    
-    while(fast!=NULL || fast->next!=NULL){
+    //counting ke liye
+    int count =1;
+    while(fast!=NULL && fast->next!=NULL){
         slow=slow->next;
         fast=fast->next->next;
-        if(fast==slow){
-            //ye while loop wala part hi woh hai jo mai socha nahi nahi tho pura code karliya tha mai
-            slow=head;
+        //ye neeche wala if detectd that the loop is actually present
+        if(slow==fast){
+            slow=slow->next;
+            //loop ki presence confirm ho gayi tho matlab agar fast ko pause karke sirf slow ko traverse karte hai tho
+            //eventually loop me chakkar kaat ke slow will meet fast again and agar hum slow ke final steps count kar le tho ho gaya apna kaam
+            //as steps take by slow  == no of element in loop -1;
             while(slow!=fast){
                 slow=slow->next;
-                fast=fast->next;
+                count++;
             }
-            return slow;
-        } 
+            //count ko return maar diye aur exitted
+            return count;
+        }
     }
-    return NULL;
+    // if no loop detected return 0
+    return 0;
 
 }
 
@@ -71,17 +74,3 @@ int main(){
 cout<<endl;
 return 0;
 }
-
-// if(slow->next==fast){
-//     return fast;
-// }
-// else{
-        
-// while(fast->next!=NULL && fast!=NULL){
-//     slow=slow->next;
-//     fast=fast->next->next;
-//     if(fast->next==slow->next){
-//         return fast->next;
-//     }
-// }
-// }
