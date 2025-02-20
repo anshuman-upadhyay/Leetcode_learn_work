@@ -71,7 +71,7 @@ return 0;
 //     Node* current=head;
 //     Node* prev=NULL;
 //     while(current!=NULL){
-//         Node* agla=current->next;
+//          Node* agla=current->next;
 //         current->next=prev;
 //         prev=current;
 //         current=agla;
