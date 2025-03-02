@@ -24,17 +24,6 @@ void printLL(Node* head){
     }
     cout<<endl;
 }
-Node* reversal(Node* head){
-    Node* current= head; Node* prev=NULL;
-    while(current){
-        Node* next=current->next;
-        current->next=prev;
-        prev=current;
-        current=next;
-    }
-    return prev;
-}
-
 Node* addTwoNumbers(Node* l1, Node* l2) {
     //linked list ko reverse kiya aur store kar liya
     Node* final =new Node();
